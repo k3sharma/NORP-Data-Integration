@@ -1,4 +1,6 @@
-import pandas as pd
+# This file merges the existing vaccination_cleaned file with population data from the owid-covid-data file
+
+mport pandas as pd
 
 # Load cleaned vaccination data
 vacc_df = pd.read_csv('vaccinations_cleaned.csv')
@@ -17,7 +19,8 @@ merged_df = pd.merge(vacc_df, population_df, on='location', how='left')
 merged_df['unvaccinated'] = merged_df['population'] - merged_df['people_vaccinated']
 merged_df['unvaccinated_per_hundred'] = 100 - merged_df['people_vaccinated_per_hundred']
 
-# Save to CSV
-merged_df.to_csv('vaccinations_with_population.csv', index=False)
+# Merge with vaccinations_with_population
+merged_df.to_csv('vaccinations_cleaned_with_population.csv', index=False)
 
+# Save to a csv file
 print("Merged dataset saved as 'vaccinations_cleaned_with_population.csv'")
