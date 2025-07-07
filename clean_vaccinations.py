@@ -1,3 +1,5 @@
+# Creates a cleaned vaccination file
+
 import pandas as pd
 
 # Load the OWID vaccinations dataset
