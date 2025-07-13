@@ -1,6 +1,6 @@
 # This file merges the existing vaccination_cleaned file with population data from the owid-covid-data file
 
-mport pandas as pd
+import pandas as pd
 
 # Load cleaned vaccination data
 vacc_df = pd.read_csv('vaccinations_cleaned.csv')

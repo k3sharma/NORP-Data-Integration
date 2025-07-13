@@ -1,8 +1,10 @@
+# Creates final cleaned dataset 
+
 import pandas as pd
 
-# Load your vaccination and case datasets
+# Load the vaccination (with population) and case datasets
 vacc_df = pd.read_csv('vaccinations_cleaned_with_population.csv')
-cases_df = pd.read_csv('Cases Data/cases_combined.csv')
+cases_df = pd.read_csv('cases_combined.csv')
 
 # Convert 'date' columns to datetime format
 vacc_df['date'] = pd.to_datetime(vacc_df['date'])
