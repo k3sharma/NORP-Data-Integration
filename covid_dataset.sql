@@ -17,4 +17,4 @@ CREATE TABLE covid_stats (
     `future_new_cases` BIGINT,
     `new_cases_per_100k` FLOAT,
     `future_cases_per_100k` FLOAT
-)
+);
