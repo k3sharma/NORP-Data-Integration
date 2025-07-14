@@ -1,0 +1,20 @@
+CREATE TABLE covid_stats (
+    `location` VARCHAR(100),
+    `date` DATE,
+    `people_vaccinated` BIGINT,
+    `people_fully_vaccinated` BIGINT,
+    `total_vaccinations` BIGINT,
+    `daily_vaccinations` BIGINT,
+    `people_vaccinated_per_hundred` FLOAT,
+    `people_fully_vaccinated_per_hundred` FLOAT,
+    `total_vaccinations_per_hundred` FLOAT,
+    `population` BIGINT,
+    `new_cases` BIGINT,
+    `total_cases` BIGINT,
+    `unvaccinated` BIGINT GENERATED ALWAYS AS (`population` - `people_vaccinated`) STORED,
+    `unvaccinated_per_hundred` FLOAT GENERATED ALWAYS AS ((`unvaccinated` / `population`) * 100) STORED,
+    `vaccination_level` VARCHAR(100), 
+    `future_new_cases` BIGINT,
+    `new_cases_per_100k` FLOAT,
+    `future_cases_per_100k` FLOAT
+)
