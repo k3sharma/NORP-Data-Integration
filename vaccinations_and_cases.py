@@ -40,3 +40,4 @@ df['future_cases_per_100k'] = (df['future_new_cases'] / df['population']) * 100_
 df.to_csv('vaccinations_cases_merged.csv', index=False)
 
 print("Merged dataset saved as 'vaccinations_cases_merged.csv'")
+
