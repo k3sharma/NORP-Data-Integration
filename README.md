@@ -5,7 +5,7 @@ You can install **pandas** using pip:
 
 ```bash
 pip install pandas
-
+``
 # Authors
 **Vishnu Gosai** (vgosai3@gatech.edu)\
 **Kush Sharma** (ksharma312@gatech.edu)
